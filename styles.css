@@ -17,12 +17,22 @@ body {
     position: absolute;
     top: 15px;
     left: 42px;
-    font-size: 72pt;
     font-family: 'Franklin Gothic Demi Cond', 'Arial Black', sans-serif;
     font-weight: bold;
     color: white;
-    letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.wild {
+    font-size: 72pt;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.cats {
+    font-size: 72pt;
+    letter-spacing: 2px;
+    margin-top: 0;
 }
 
 header {
