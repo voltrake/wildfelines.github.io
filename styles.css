@@ -1,16 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    min-width: 1920px;
-    min-height: 1080px;
-    overflow-x: auto;
 }
 
 .background-section {
-    width: 1920px;
-    height: 1080px;
+    width: 1240px;
+    height: 698px;
     background-image: url('https://media.discordapp.net/attachments/1503446714239946843/1503446972680372425/Starter.jpg?ex=6a03619a&is=6a02101a&hm=c2a6630e4211383e596a2d34f9e4127b76d6c6fa5ca64f44ec688fec589c3225&=&format=webp&width=1240&height=698');
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -24,7 +21,6 @@ body {
     font-family: 'Franklin Gothic Demi Cond', 'Arial Black', sans-serif;
     font-weight: bold;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     letter-spacing: 1px;
 }
 
@@ -44,20 +40,5 @@ header nav a {
     font-family: 'Franklin Gothic Medium Cond', 'Arial', sans-serif;
     color: white;
     text-decoration: none;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     font-weight: 500;
-}
-
-.felines-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 120pt;
-    font-family: 'Franklin Gothic Demi Cond', 'Arial Black', sans-serif;
-    font-weight: bold;
-    color: white;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-    letter-spacing: 6px;
-    text-align: center;
 }
