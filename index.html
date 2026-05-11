@@ -17,10 +17,52 @@
             background-size: auto;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .wild-cats-banner {
+            position: absolute;
+            top: 15px;
+            left: 42px;
+            font-size: 72pt;
+            font-family: 'Franklin Gothic Demi Cond', sans-serif;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        header {
+            position: absolute;
+            top: 35px;
+            right: 0;
+            display: flex;
+            gap: 40px;
+            padding-right: 42px;
+        }
+        
+        header nav {
+            display: flex;
+            gap: 40px;
+        }
+        
+        header nav a {
+            font-size: 72pt;
+            font-family: 'Franklin Gothic Medium Cond', sans-serif;
+            color: white;
+            text-decoration: none;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
 <body>
-    <section class="background-section"></section>
+    <section class="background-section">
+        <div class="wild-cats-banner">WILD CATS</div>
+        <header>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Species</a>
+            </nav>
+        </header>
+    </section>
 </body>
 </html>
