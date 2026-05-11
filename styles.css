@@ -6,7 +6,7 @@ body {
 .background-section {
     width: 1240px;
     height: 698px;
-    background-image: url('https://cdn.discordapp.com/attachments/1503446714239946843/1503446972680372425/Starter.jpg?ex=6a03619a&is=6a02101a&hm=c2a6630e4211383e596a2d34f9e4127b76d6c6fa5ca64f44ec688fec589c3225');
+    background-image: url('https://media.discordapp.net/attachments/1503446714239946843/1503446972680372425/Starter.jpg?ex=6a03619a&is=6a02101a&hm=c2a6630e4211383e596a2d34f9e4127b76d6c6fa5ca64f44ec688fec589c3225&=&format=webp&width=1240&height=698');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,30 +15,43 @@ body {
 
 .wild-cats-banner {
     position: absolute;
-    top: 30px;
-    left: 60px;
-    font-size: 48pt;
+    top: 15px;
+    left: 42px;
+    font-size: 72pt;
     font-family: 'Franklin Gothic Demi Cond', 'Arial Black', sans-serif;
     font-weight: bold;
     color: white;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 header {
     position: absolute;
-    top: 30px;
-    right: 60px;
+    top: 35px;
+    right: 42px;
 }
 
 header nav {
     display: flex;
-    gap: 30px;
+    gap: 40px;
 }
 
 header nav a {
-    font-size: 36pt;
+    font-size: 72pt;
     font-family: 'Franklin Gothic Medium Cond', 'Arial', sans-serif;
     color: white;
     text-decoration: none;
     font-weight: 500;
+}
+
+.felines-text {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 180pt;
+    font-family: 'Franklin Gothic Demi Cond', 'Arial Black', sans-serif;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 8px;
+    text-align: center;
 }
