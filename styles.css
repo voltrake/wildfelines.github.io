@@ -78,6 +78,11 @@ body {
     top: 25px;
     left: 42px;
 
+    font-family: "Baskerville Old Face", serif;
+    font-weight: normal;
+
+    color: white;
+
     z-index: 100;
 }
 
@@ -86,6 +91,8 @@ body {
     letter-spacing: 1px;
     margin: 0;
     line-height: 0.9;
+
+    text-shadow: none;
 }
 
 .cats {
@@ -110,13 +117,14 @@ header nav {
 
 header nav a {
     font-size: 28pt;
-    font-family: 'Franklin Gothic Medium Cond', 'Arial', sans-serif;
+
+    font-family: "Baskerville Old Face", serif;
 
     color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: normal;
 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: none;
 }
 
 .felines-text {
@@ -155,8 +163,12 @@ header nav a {
     font-size: 42px;
     margin-bottom: 25px;
     padding-left: 10px;
-}
 
+    font-family: "Baskerville Old Face", serif;
+    font-weight: normal;
+
+    text-shadow: none;
+}
 .viewing-container {
     display: flex;
     gap: 25px;
@@ -184,13 +196,23 @@ header nav a {
 .view-card h3 {
     font-size: 28px;
     margin: 18px 18px 10px;
+
+    font-family: "Baskerville Old Face", serif;
+    font-weight: normal;
+
+    text-shadow: none;
 }
 
 .view-card p {
     font-size: 18px;
     line-height: 1.5;
     margin: 0 18px 20px;
+
     color: #cccccc;
+
+    font-family: "Baskerville Old Face", serif;
+
+    text-shadow: none;
 }
 
 /* FIRST SLIDE TEXT */
@@ -211,9 +233,9 @@ header nav a {
     font-size: 24px;
     line-height: 1.6;
 
-    font-family: Arial, sans-serif;
+    font-family: "Baskerville Old Face", serif;
 
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+    text-shadow: none;
 
     z-index: 5;
 }
