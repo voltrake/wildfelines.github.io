@@ -328,3 +328,9 @@ header nav a {
 
     color: white;
 }
+
+.view-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
