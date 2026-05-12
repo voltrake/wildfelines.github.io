@@ -8,63 +8,69 @@
 </head>
 <body>
 
-    <section class="background-section">
+<section class="background-section">
 
-        <!-- Slider -->
+    <!-- SLIDER CONTAINER -->
+    <div class="slider">
+
+        <!-- Slides -->
         <div class="slides">
 
-    <div class="slide"
-        style="background-image: url('https://cdn.discordapp.com/attachments/1503446714239946843/1503446972680372425/Starter.jpg?ex=6a03619a&is=6a02101a&hm=c2a6630e4211383e596a2d34f9e4127b76d6c6fa5ca64f44ec688fec589c3225');">
-    </div>
+            <div class="slide"
+                style="background-image: url('https://cdn.discordapp.com/attachments/1503446714239946843/1503446972680372425/Starter.jpg?ex=6a03619a&is=6a02101a&hm=c2a6630e4211383e596a2d34f9e4127b76d6c6fa5ca64f44ec688fec589c3225');">
+            </div>
 
-    <div class="slide"
-        style="background-image: url('https://media.discordapp.net/attachments/1503446714239946843/1503720967229149356/Page2.jpg?ex=6a0460c8&is=6a030f48&hm=66d03d05505acfa3959df1d144cce6bdc8f5c9fb78fb1c6376c27e455a6f5f91&=&format=webp&width=1240&height=699');">
-    </div>
+            <div class="slide"
+                style="background-image: url('https://media.discordapp.net/attachments/1503446714239946843/1503720967229149356/Page2.jpg?ex=6a0460c8&is=6a030f48&hm=66d03d05505acfa3959df1d144cce6bdc8f5c9fb78fb1c6376c27e455a6f5f91&=&format=webp&width=1240&height=699');">
+            </div>
 
-    <div class="slide"
-        style="background-image: url('https://media.discordapp.net/attachments/1503446714239946843/1503722335771951207/Page3.jpg?ex=6a04620e&is=6a03108e&hm=d06934a9e69fd00e2b36236b43f13be68358ac733255ac765596077b23ca7945&=&format=webp&width=1240&height=699');">
-    </div>
+            <div class="slide"
+                style="background-image: url('https://media.discordapp.net/attachments/1503446714239946843/1503722335771951207/Page3.jpg?ex=6a04620e&is=6a03108e&hm=d06934a9e69fd00e2b36236b43f13be68358ac733255ac765596077b23ca7945&=&format=webp&width=1240&height=699');">
+            </div>
 
-</div>
-
-            <!-- Button -->
-            <button class="next-btn">&#10095;</button>
         </div>
 
-        <div class="wild-cats-banner">
-            <div class="wild">WILD</div>
-            <div class="cats">CATS</div>
-        </div>
+        <!-- Button -->
+        <button class="next-btn">&#10095;</button>
 
-        <header>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Species</a>
-            </nav>
-        </header>
+    </div>
 
-        <div class="felines-text">FELINES</div>
+    <!-- TEXT -->
+    <div class="wild-cats-banner">
+        <div class="wild">WILD</div>
+        <div class="cats">CATS</div>
+    </div>
 
-    </section>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Species</a>
+        </nav>
+    </header>
 
-    <script>
-        const slides = document.querySelector('.slides');
-        const slide = document.querySelectorAll('.slide');
-        const nextBtn = document.querySelector('.next-btn');
+    <div class="felines-text">FELINES</div>
 
-        let index = 0;
+</section>
 
-        nextBtn.addEventListener('click', () => {
-            index++;
+<script>
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
+    const nextBtn = document.querySelector('.next-btn');
 
-            if (index >= slide.length) {
-                index = 0;
-            }
+    let index = 0;
 
-            slides.style.transform = `translateX(-${index * 1240}px)`;
-        });
-    </script>
+    nextBtn.addEventListener('click', () => {
+
+        index++;
+
+        if (index >= slide.length) {
+            index = 0;
+        }
+
+        slides.style.transform = `translateX(-${index * 1240}px)`;
+    });
+</script>
 
 </body>
 </html>
