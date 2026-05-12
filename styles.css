@@ -455,3 +455,25 @@ header nav a {
     line-height: 1.8;
     color: #dddddd;
 }
+
+/* ALL TITLES -> IMPACT */
+
+.wild,
+.cats,
+.slide-title,
+.third-title,
+.recommended-title,
+.why-title,
+.facts-label,
+.facts-dropdown h2,
+.view-card h3,
+header nav a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+}
+
+.wild,
+.cats {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+}
