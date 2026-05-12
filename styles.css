@@ -178,7 +178,9 @@ header nav a {
 }
 .viewing-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
+    justify-content: space-between;
 }
 
 .view-card {
