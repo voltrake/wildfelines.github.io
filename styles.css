@@ -19,6 +19,7 @@ body {
     top: 0;
     left: 0;
     overflow: hidden;
+    position: relative;
 }
 
 .slides {
@@ -266,11 +267,20 @@ header nav a {
 
 .second-slide .slide-content {
     position: absolute;
-    left: 60px;
+    right: 60px;
+    left: auto;
+
     bottom: 90px;
 
     width: 560px;
     z-index: 10;
+
+    text-align: right;
+}
+
+.second-slide .slide-title,
+.second-slide .slide-text {
+    text-align: right;
 }
 
 .second-slide .slide-title {
