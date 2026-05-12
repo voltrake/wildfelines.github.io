@@ -253,24 +253,25 @@ header nav a {
     right: 60px;
     left: auto;
     bottom: 90px;
+
     width: 560px;
     z-index: 10;
-
-    text-align: right;
 
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    align-items: flex-end;
 }
 
 .second-slide .slide-title {
-    order: 1;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .second-slide .slide-text {
-    order: 2;
+    margin: 0;
 }
+
 .second-slide .slide-title {
     font-size: 42px;
     margin-bottom: 20px;
