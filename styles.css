@@ -26,7 +26,6 @@ body {
     width: 3720px;
     height: 698px;
     transition: transform 0.6s ease-in-out;
-    font-size: 0;
 }
 
 .slide {
@@ -261,6 +260,32 @@ header nav a {
     font-weight: normal;
 
     margin-bottom: 20px;
+
+    color: white;
+}
+
+.second-slide .slide-text {
+    position: relative;
+
+    bottom: auto;
+    left: auto;
+
+    width: 100%;
+
+    font-size: 22px;
+    line-height: 1.6;
+
+    color: white;
+
+    font-family: "Baskerville Old Face", serif;
+}
+
+.second-slide .slide-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+
+    font-family: "Baskerville Old Face", serif;
+    font-weight: normal;
 
     color: white;
 }
