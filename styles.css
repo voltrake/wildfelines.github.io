@@ -16,11 +16,8 @@ body {
     cursor: grab;
     width: 1240px;
     height: 698px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
 
 .slider:active {
