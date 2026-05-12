@@ -127,15 +127,16 @@
 
     let index = 0;
 
+    const slideWidth = document.querySelector('.slider').offsetWidth;
+
     nextBtn.addEventListener('click', () => {
+        index = (index + 1) % slide.length;
+        slides.style.transform = `translateX(-${index * slideWidth}px)`;
+    });
 
-        index++;
-
-        if (index >= slide.length) {
-            index = 0;
-        }
-
-        slides.style.transform = `translateX(-${index * 1240}px)`;
+    window.addEventListener('resize', () => {
+        const newWidth = document.querySelector('.slider').offsetWidth;
+        slides.style.transform = `translateX(-${index * newWidth}px)`;
     });
 </script>
 
