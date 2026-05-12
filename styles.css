@@ -314,6 +314,11 @@ header nav a {
     margin: 60px auto;
     color: white;
     font-family: "Baskerville Old Face", serif;
+
+    background-color: #201616;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 .why-title {
