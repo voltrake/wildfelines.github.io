@@ -150,17 +150,37 @@
     </p>
 
 </section>
-    <section class="facts-section">
+    <<section class="facts-section">
 
-    <img 
-        src="https://media.discordapp.net/attachments/1503446714239946843/1503796513350877244/facts.jpg?ex=6a04a723&is=6a0355a3&hm=fb0673dbfea07fd886a317985dab2a3e412745b14b1f21c5e0a1c80418a18949&=&format=webp&width=1823&height=669"
-        alt="Animal Facts"
-        class="facts-image"
-    >
+    <div class="facts-container">
 
-    <div class="facts-label">
-        Fascinating Animal Facts
+        <img 
+            src="https://media.discordapp.net/attachments/1503446714239946843/1503796513350877244/facts.jpg?ex=6a04a723&is=6a0355a3&hm=fb0673dbfea07fd886a317985dab2a3e412745b14b1f21c5e0a1c80418a18949&=&format=webp&width=1823&height=669"
+            alt="Animal Facts"
+            class="facts-image"
+        >
+
+        <div class="facts-label">
+            Fascinating Animal Facts
+        </div>
+
     </div>
+
+    <div class="facts-dropdown">
+
+        <h2>1. Black Panthers are Not a Species</h2>
+
+        <p>
+            While often spoken of as a distinct species, black panthers are actually not a separate species at all. They are leopards or jaguars with a genetic mutation known as melanism, which causes their fur to be black. This adaptation helps them blend into the dense forests they typically inhabit, providing an advantage in hunting.
+        </p>
+
+        <p>
+            Their dark coat is a result of excessive melanin production. The spots that leopards or jaguars are known for are still present, but they are hard to see against the dark fur. This intriguing fact about black panthers adds a layer of mystery to their existence.
+        </p>
+
+    </div>
+
+</section>
 
 </section>
 
@@ -241,6 +261,16 @@
     window.addEventListener('resize', () => {
         updateSlide();
     });
+</script>
+        <script>
+
+const factsContainer = document.querySelector('.facts-container');
+const factsDropdown = document.querySelector('.facts-dropdown');
+
+factsContainer.addEventListener('click', () => {
+    factsDropdown.classList.toggle('active');
+});
+
 </script>
 </body>
 </html>
