@@ -32,11 +32,15 @@ body {
 .slide {
     width: 1240px;
     height: 698px;
+
     flex-shrink: 0;
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
 }
 
 /* BUTTON */
@@ -74,14 +78,7 @@ body {
     top: 25px;
     left: 42px;
 
-    font-family: 'Franklin Gothic Demi Cond', 'Arial Black', sans-serif;
-    font-weight: bold;
-
-    color: white;
-
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-
-    z-index: 10;
+    z-index: 100;
 }
 
 .wild {
@@ -102,7 +99,8 @@ header {
     position: absolute;
     top: 30px;
     right: 42px;
-    z-index: 10;
+
+    z-index: 100;
 }
 
 header nav {
@@ -200,14 +198,13 @@ header nav a {
 .first-slide {
     position: relative;
 }
-
 .slide-text {
     position: absolute;
 
     bottom: 70px;
     left: 60px;
 
-    width: 520px;
+    width: 500px;
 
     color: white;
 
@@ -218,5 +215,5 @@ header nav a {
 
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
 
-    z-index: 15;
+    z-index: 5;
 }
