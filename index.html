@@ -7,11 +7,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <section class="background-section">
+
+        <!-- Slider -->
+        <div class="slider">
+            <div class="slides">
+                <div class="slide active"
+                    style="background-image: url('https://cdn.discordapp.com/attachments/1503446714239946843/1503446972680372425/Starter.jpg?ex=6a03619a&is=6a02101a&hm=c2a6630e4211383e596a2d34f9e4127b76d6c6fa5ca64f44ec688fec589c3225');">
+                </div>
+
+                <div class="slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1600&auto=format&fit=crop');">
+                </div>
+
+                <div class="slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1600&auto=format&fit=crop');">
+                </div>
+            </div>
+
+            <!-- Button -->
+            <button class="next-btn">&#10095;</button>
+        </div>
+
         <div class="wild-cats-banner">
             <div class="wild">WILD</div>
             <div class="cats">CATS</div>
         </div>
+
         <header>
             <nav>
                 <a href="#">Home</a>
@@ -19,7 +42,28 @@
                 <a href="#">Species</a>
             </nav>
         </header>
+
         <div class="felines-text">FELINES</div>
+
     </section>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slide = document.querySelectorAll('.slide');
+        const nextBtn = document.querySelector('.next-btn');
+
+        let index = 0;
+
+        nextBtn.addEventListener('click', () => {
+            index++;
+
+            if (index >= slide.length) {
+                index = 0;
+            }
+
+            slides.style.transform = `translateX(-${index * 1240}px)`;
+        });
+    </script>
+
 </body>
 </html>
