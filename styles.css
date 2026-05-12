@@ -267,17 +267,20 @@ header nav a {
 .second-slide .slide-content {
     position: absolute;
     left: 60px;
-    bottom: 70px;
+    bottom: 90px;
+
     width: 560px;
     z-index: 10;
 }
 
 .second-slide .slide-title {
-    display: block;
-    color: white;
     font-size: 42px;
     margin-bottom: 20px;
-    z-index: 11;
+}
+
+.second-slide .slide-text {
+    font-size: 22px;
+    line-height: 1.6;
 }
 
 .third-content {
