@@ -48,6 +48,10 @@ body {
 
 /* TEXT CONTENT */
 .wild-cats-banner {
+    text-decoration: none;
+    color: white;
+    display: block;
+    
     position: absolute;
     top: 25px;
     left: 42px;
@@ -55,9 +59,12 @@ body {
     font-family: "Baskerville Old Face", serif;
     font-weight: normal;
 
-    color: white;
-
     z-index: 100;
+}
+
+.wild-cats-banner:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 .wild {
