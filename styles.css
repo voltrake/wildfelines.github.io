@@ -348,3 +348,33 @@ header nav a {
     line-height: 1.8;
     color: #dddddd;
 }
+
+.facts-section {
+    width: 1240px;
+    margin: 60px auto;
+    position: relative;
+}
+
+.facts-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* bottom-left label */
+.facts-label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    background: rgba(34, 139, 34, 0.75); /* green tone */
+    color: white;
+
+    padding: 12px 18px;
+    font-size: 22px;
+
+    font-family: "Baskerville Old Face", serif;
+
+    border-radius: 8px;
+}
