@@ -194,3 +194,29 @@ header nav a {
     margin: 0 18px 20px;
     color: #cccccc;
 }
+
+/* FIRST SLIDE TEXT */
+
+.first-slide {
+    position: relative;
+}
+
+.slide-text {
+    position: absolute;
+
+    bottom: 70px;
+    left: 60px;
+
+    width: 520px;
+
+    color: white;
+
+    font-size: 24px;
+    line-height: 1.6;
+
+    font-family: Arial, sans-serif;
+
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+
+    z-index: 15;
+}
