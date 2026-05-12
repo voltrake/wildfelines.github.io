@@ -3,11 +3,13 @@ body {
     padding: 0;
     overflow-x: hidden;
 
-    background: url("https://i.pinimg.com/1200x/c3/7f/d3/c37fd31e3ab9e51db25b2d089f750f80.jpg") no-repeat center center fixed;
+    background-image: url("https://media.discordapp.net/attachments/1503446714239946843/1503789504228626643/background.jpg");
 
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-
 
 /* SLIDER */
 .slider {
@@ -321,7 +323,7 @@ header nav a {
     color: white;
     font-family: "Baskerville Old Face", serif;
 
-    background-color: #201616;
+    background-color: rgba(32, 22, 22, 0.85);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
