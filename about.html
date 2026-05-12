@@ -83,7 +83,83 @@
 </section>
 
 <script>
-/* COPY YOUR SLIDER SCRIPT HERE */
+
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
+
+    let index = 0;
+
+    const slideWidth = slider.offsetWidth;
+
+    /* =========================
+       AUTO SLIDE
+    ========================= */
+    let autoSlide = setInterval(nextSlide, 4000);
+
+    function nextSlide() {
+        index = (index + 1) % slide.length;
+        updateSlide();
+    }
+
+    function updateSlide() {
+        slides.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
+
+    /* =========================
+       DRAG FUNCTIONALITY
+    ========================= */
+    let isDown = false;
+    let startX;
+    let currentX;
+
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX;
+        slider.style.cursor = "grabbing";
+
+        clearInterval(autoSlide); // pause autoplay while dragging
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+
+        currentX = e.pageX;
+        let diff = currentX - startX;
+
+        slides.style.transform = `translateX(${-index * slideWidth + diff}px)`;
+    });
+
+    slider.addEventListener('mouseup', (e) => {
+        isDown = false;
+        slider.style.cursor = "grab";
+
+        let diff = e.pageX - startX;
+
+        if (diff < -100 && index < slide.length - 1) {
+            index++;
+        } 
+        else if (diff > 100 && index > 0) {
+            index--;
+        }
+
+        updateSlide();
+
+        autoSlide = setInterval(nextSlide, 4000); // resume autoplay
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.style.cursor = "default";
+        updateSlide();
+    });
+
+    /* =========================
+       RESPONSIVE FIX
+    ========================= */
+    window.addEventListener('resize', () => {
+        updateSlide();
+    });
 </script>
 
 </body>
