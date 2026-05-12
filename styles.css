@@ -13,6 +13,7 @@ body {
 
 /* SLIDER */
 .slider {
+    cursor: grab;
     width: 1240px;
     height: 698px;
     position: absolute;
@@ -20,6 +21,10 @@ body {
     left: 0;
     overflow: hidden;
     position: relative;
+}
+
+.slider:active {
+    cursor: grabbing;
 }
 
 .slides {
