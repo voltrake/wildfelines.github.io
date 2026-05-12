@@ -1,14 +1,25 @@
 body {
     margin: 0;
     padding: 0;
-    background: black;
     overflow-x: hidden;
+
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a4cfda84-67fd-4870-bea1-522eb0e82fcc/d38sa8t-db9eaa7e-3db6-4ff6-97fd-193c5ae8aea0.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-.background-section {
-    width: 1240px;
-    height: 698px;
-    position: relative;
-    margin: 0 auto;
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: -1;
 }
 
 /* SLIDER */
