@@ -264,6 +264,34 @@ header nav a:active {
 
     text-shadow: none;
 }
+
+.recommended-title {
+    position: relative;
+    z-index: 1;
+}
+
+/* TREE BACKGROUND BEHIND TITLE */
+.recommended-title::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 100%;
+    height: 90px;
+
+    background-image: url("https://media.discordapp.net/attachments/1503446714239946843/1504111091347886100/tree-removebg-preview.png?ex=6a05cc1d&is=6a047a9d&hm=c679bc08338c4a23cc1f4e4db4df61617be40b146ad85794892428d0d8186e14&=&format=webp&quality=lossless&width=625&height=625");
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+
+    opacity: 0.6;
+
+    z-index: -1;
+}
+
 .viewing-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
