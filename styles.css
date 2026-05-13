@@ -596,4 +596,39 @@ header nav a {
         2px 2px 10px rgba(0,0,0,0.85);
 }
 
+/* LETTER ANIMATION */
+header nav a span {
+    display: inline-block;
+    transition: color 0.3s ease;
+}
 
+/* animate each letter on hover */
+header nav a:hover span {
+    animation: bubble 1.5s infinite ease-in-out;
+}
+
+/* delays */
+header nav a:hover span:nth-child(1) { animation-delay: 0s; }
+header nav a:hover span:nth-child(2) { animation-delay: 0.1s; }
+header nav a:hover span:nth-child(3) { animation-delay: 0.2s; }
+header nav a:hover span:nth-child(4) { animation-delay: 0.3s; }
+header nav a:hover span:nth-child(5) { animation-delay: 0.4s; }
+header nav a:hover span:nth-child(6) { animation-delay: 0.5s; }
+header nav a:hover span:nth-child(7) { animation-delay: 0.6s; }
+
+@keyframes bubble {
+    0% {
+        color: white;
+        transform: translateY(0px);
+    }
+
+    50% {
+        color: #ffb347;
+        transform: translateY(-4px);
+    }
+
+    100% {
+        color: white;
+        transform: translateY(0px);
+    }
+}
