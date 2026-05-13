@@ -1,12 +1,15 @@
 body {
     margin: 0;
     padding: 0;
+
     overflow-x: hidden;
 
-    background: url("https://media.discordapp.net/attachments/1503446714239946843/1503789504228626643/background.jpg?ex=6a04a09c&is=6a034f1c&hm=0ff17c92ac30b6d203d555fcf94b7548ff469cb9987f04bb9f3b796d80fc27e6&=&format=webp&width=1065&height=799")
-    no-repeat center center fixed;
+    background:
+        url("https://media.discordapp.net/attachments/1503446714239946843/1503789504228626643/background.jpg?ex=6a04a09c&is=6a034f1c&hm=0ff17c92ac30b6d203d555fcf94b7548ff469cb9987f04bb9f3b796d80fc27e6&=&format=webp&width=1065&height=799")
+        no-repeat center center fixed;
 
     background-size: cover;
+
     min-height: 100vh;
 }
 
@@ -292,23 +295,27 @@ header nav a:active {
 .recommended-section {
     width: 1240px;
 
-    margin: 0 auto 40px auto;
-    margin-top: 20px;
-
-    color: white;
-
-    font-family: Arial, sans-serif;
+    margin: 20px auto 40px auto;
 
     position: relative;
 
     padding: 35px;
 
+    color: white;
+
+    font-family: Arial, sans-serif;
+
     border-radius: 18px;
 
-    overflow: hidden;
+    /* IMPORTANT FIXES */
+    isolation: isolate;
+    z-index: 1;
+
+    /* KEEP BACKGROUND INSIDE */
+    overflow: visible;
 
     /* JUNGLE BACKGROUND */
-    background-image:
+    background:
         linear-gradient(
             rgba(0,0,0,0.45),
             rgba(0,0,0,0.55)
@@ -322,12 +329,9 @@ header nav a:active {
     /* CHOCOLATE BORDER */
     border: 10px solid transparent;
 
-    border-image-source:
-        url("https://foollovers.com/mat/menu05/51a-none.gif");
-
-    border-image-slice: 10;
-
-    border-image-repeat: round;
+    border-image:
+        url("https://foollovers.com/mat/menu05/51a-none.gif")
+        10 round;
 
     box-sizing: border-box;
 
