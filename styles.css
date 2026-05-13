@@ -291,11 +291,73 @@ header nav a:active {
 
 .recommended-section {
     width: 1240px;
+
     margin: 0 auto 40px auto;
     margin-top: 20px;
+
     color: white;
+
     font-family: Arial, sans-serif;
+
+    position: relative;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    /* JUNGLE BACKGROUND */
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.55)
+        ),
+        url("https://i.pinimg.com/736x/3f/0b/5b/3f0b5b534446fe835c03f152e4579ad2.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* CHOCOLATE BORDER */
+    border: 10px solid transparent;
+
+    border-image-source:
+        url("https://foollovers.com/mat/menu05/51a-none.gif");
+
+    border-image-slice: 10;
+
+    border-image-repeat: round;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 10px 28px rgba(0,0,0,0.45);
 }
+.view-card {
+    background: rgba(15, 10, 8, 0.88);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    backdrop-filter: blur(4px);
+
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.view-card:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 10px 24px rgba(0,0,0,0.55);
+} 
 
 .recommended-title {
     position: relative;
