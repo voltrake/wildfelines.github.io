@@ -48,13 +48,16 @@ header nav a {
 
     margin-top: 0;
 
-    /* CUSTOM BORDER */
-    border-width: 7px;
-    border-style: solid;
+    /* BIGGER DECORATIVE BORDER */
+    border: 18px solid transparent;
 
-    border-image:
-        url("https://foollovers.com/mat/menu05/51a-none.gif")
-        9 fill round;
+    border-image-source:
+        url("https://foollovers.com/mat/menu05/51a-none.gif");
+
+    border-image-slice: 18;
+
+    border-image-repeat: round;
+    
 }
 
 .slider:active {
