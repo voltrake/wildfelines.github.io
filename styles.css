@@ -404,7 +404,7 @@ header nav a:active {
 }
 
 .facts-dropdown.active {
-    max-height: 600px;
+    max-height: 5000px;
     padding: 30px;
 }
 
