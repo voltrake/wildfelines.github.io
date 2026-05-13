@@ -524,7 +524,6 @@ header nav a:active {
 }
 
 
-}
 .viewing-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
