@@ -44,21 +44,20 @@ header nav a {
     height: 698px;
 
     position: relative;
+    overflow: hidden;
 
     margin-top: 0;
 
-    /* IMPORTANT */
-    overflow: visible;
-
-    /* BIG BORDER */
-    border: 24px solid transparent;
+    border: 10px solid transparent;
 
     border-image-source:
         url("https://foollovers.com/mat/menu05/51a-none.gif");
 
-    border-image-slice: 24 fill;
+    border-image-slice: 10;
 
     border-image-repeat: round;
+
+    box-sizing: border-box;
 }
 
 .slider:active {
@@ -73,10 +72,7 @@ header nav a {
     flex-shrink: 0;
 }
 
-.slides {
-    overflow: hidden;
-    border-radius: 4px;
-}
+
 
 .slide {
     width: 1240px;
@@ -150,7 +146,7 @@ header {
 }
 
 /* TRANSPARENT GLASS CONTAINER */
-hheader nav {
+header nav {
     display: flex;
     gap: 18px;
 
@@ -222,20 +218,14 @@ header nav a::after {
 
     position: absolute;
 
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    width: 85px;
-    height: 45px;
+    inset: 0;
 
     background-image:
         url("https://i.pinimg.com/originals/ca/85/65/ca8565841d017d9784a539fee2cd4f77.gif");
 
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
 
     opacity: 0;
 
@@ -245,21 +235,15 @@ header nav a::after {
 
     z-index: -1;
 
-    border-radius: 8px;
+    border-radius: 12px;
 }
+
 
 /* show GIF only on hover of THAT button */
 header nav a:hover::after {
     opacity: 1;
 }
 
-header nav a::after {
-    width: 160px;
-    height: 120px;
-    opacity: 0;
-    filter: brightness(0.9);
-    z-index: -1;
-}
 
 /* HOVER EFFECT */
 header nav a:hover {
@@ -598,37 +582,38 @@ header nav a {
 
 /* LETTER ANIMATION */
 header nav a span {
+    position: relative;
+    z-index: 2;
+
     display: inline-block;
-    transition: color 0.3s ease;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
-/* animate each letter on hover */
+/* LETTER FLOAT EFFECT */
 header nav a:hover span {
-    animation: bubble 1.5s infinite ease-in-out;
+    animation: bubble 0.8s ease-in-out infinite alternate;
 }
 
 /* delays */
 header nav a:hover span:nth-child(1) { animation-delay: 0s; }
-header nav a:hover span:nth-child(2) { animation-delay: 0.1s; }
-header nav a:hover span:nth-child(3) { animation-delay: 0.2s; }
-header nav a:hover span:nth-child(4) { animation-delay: 0.3s; }
-header nav a:hover span:nth-child(5) { animation-delay: 0.4s; }
-header nav a:hover span:nth-child(6) { animation-delay: 0.5s; }
-header nav a:hover span:nth-child(7) { animation-delay: 0.6s; }
+header nav a:hover span:nth-child(2) { animation-delay: 0.05s; }
+header nav a:hover span:nth-child(3) { animation-delay: 0.1s; }
+header nav a:hover span:nth-child(4) { animation-delay: 0.15s; }
+header nav a:hover span:nth-child(5) { animation-delay: 0.2s; }
+header nav a:hover span:nth-child(6) { animation-delay: 0.25s; }
+header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
 
 @keyframes bubble {
-    0% {
-        color: white;
+    from {
         transform: translateY(0px);
+        color: white;
     }
 
-    50% {
-        color: #ffb347;
-        transform: translateY(-4px);
-    }
-
-    100% {
-        color: white;
-        transform: translateY(0px);
+    to {
+        transform: translateY(-5px);
+        color: #ffcc70;
     }
 }
