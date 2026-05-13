@@ -144,7 +144,7 @@ header {
 }
 
 /* TRANSPARENT GLASS CONTAINER */
-header nav {
+hheader nav {
     display: flex;
     gap: 18px;
 
@@ -152,20 +152,22 @@ header nav {
 
     border-radius: 18px;
 
+    /* BROWN GRADIENT */
     background: linear-gradient(
         135deg,
-        rgba(20,20,20,0.75),
-        rgba(45,45,45,0.45)
+        rgba(70, 45, 25, 0.85),
+        rgba(35, 20, 10, 0.75)
     );
 
     backdrop-filter: blur(10px);
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
     box-shadow:
         0 8px 24px rgba(0,0,0,0.45),
         inset 0 1px 0 rgba(255,255,255,0.05);
 }
+
 
 /* NAV BUTTONS */
 header nav a {
@@ -200,6 +202,50 @@ header nav a {
     box-shadow:
         0 4px 12px rgba(0,0,0,0.4),
         inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+header nav a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* GIF overlay (hidden by default) */
+header nav a::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 120px;
+    height: 80px;
+
+    background-image: url("https://i.pinimg.com/originals/ca/85/65/ca8565841d017d9784a539fee2cd4f77.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0;
+    transition: opacity 0.25s ease;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+/* show GIF only on hover of THAT button */
+header nav a:hover::after {
+    opacity: 1;
+}
+
+header nav a::after {
+    width: 160px;
+    height: 120px;
+    opacity: 0;
+    filter: brightness(0.9);
+    z-index: -1;
 }
 
 /* HOVER EFFECT */
