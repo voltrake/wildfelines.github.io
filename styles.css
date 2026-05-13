@@ -363,27 +363,99 @@ header nav a:active {
         0 10px 24px rgba(0,0,0,0.55);
 } 
 
+/* =========================
+   RECOMMENDED TITLE
+========================= */
+
 .recommended-title {
     position: relative;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
     padding: 24px 80px;
+
     margin-bottom: 35px;
-
-    font-size: 42px;
-    letter-spacing: 2px;
-
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
     border-radius: 18px;
 
     overflow: hidden;
+
     isolation: isolate;
 
-    /* IMPORTANT: makes stacking work correctly */
-    z-index: 0;
+    z-index: 1;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 42px;
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,0.45);
+}
+
+/* BACKGROUND IMAGE */
+.recommended-title::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        url("https://i.pinimg.com/1200x/cf/72/99/cf7299d662c7a728be4e47bf012681b0.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -2;
+}
+
+/* DARK OVERLAY */
+.recommended-title::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,0,0,0.35),
+            rgba(40,20,10,0.45)
+        );
+
+    z-index: -1;
+}
+
+/* ANIMATED TEXT */
+.recommended-title span {
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            #ffe29a 0%,
+            #ffb347 25%,
+            #fff0c2 50%,
+            #c98a2b 75%
+        );
+
+    background-size: 300% 300%;
+
+    animation: slideGradient 10s linear infinite;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ANIMATION */
+@keyframes slideGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
 }
 
 /* BACKGROUND IMAGE */
@@ -436,62 +508,9 @@ header nav a:active {
     100% { background-position: 200% 50%; }
 }
 
-    /* ANIMATED TEXT GRADIENT */
-    background-image:
-        repeating-linear-gradient(
-            -45deg,
-            #ffe29a 0%,
-            #ffb347 20%,
-            #fff0c2 40%,
-            #c98a2b 60%,
-            #ffe29a 80%
-        );
+    
 
-    background-size: 200vw 200vw;
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    animation: slideGradient 18s linear infinite;
-}
-
-/* BACKGROUND IMAGE */
-.recommended-title::before {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background-image:
-        url("https://i.pinimg.com/1200x/cf/72/99/cf7299d662c7a728be4e47bf012681b0.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    opacity: 0.95;
-
-    z-index: -2;
-}
-
-/* DARK OVERLAY */
-.recommended-title::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0,0,0,0.35),
-            rgba(40,20,10,0.45)
-        );
-
-    z-index: -1;
-}
 
 /* GRADIENT ANIMATION */
 @keyframes slideGradient {
@@ -504,41 +523,7 @@ header nav a:active {
     }
 }
 
-.recommended-title::before {
-    content: "";
 
-    position: absolute;
-
-    inset: 0;
-
-    background-image:
-        url("https://i.pinimg.com/1200x/cf/72/99/cf7299d662c7a728be4e47bf012681b0.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    opacity: 0.95;
-
-    z-index: -2;
-}
-
-/* DARK OVERLAY FOR READABILITY */
-.recommended-title::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0,0,0,0.35),
-            rgba(40,20,10,0.45)
-        );
-
-    z-index: -1;
 }
 .viewing-container {
     display: grid;
