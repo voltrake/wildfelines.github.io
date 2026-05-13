@@ -39,12 +39,22 @@ header nav a {
 /* SLIDER */
 .slider {
     cursor: grab;
+
     width: 1240px;
     height: 698px;
+
     position: relative;
     overflow: hidden;
-    
+
     margin-top: 0;
+
+    /* CUSTOM BORDER */
+    border-width: 7px;
+    border-style: solid;
+
+    border-image:
+        url("https://foollovers.com/mat/menu05/51a-none.gif")
+        9 fill round;
 }
 
 .slider:active {
