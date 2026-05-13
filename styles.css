@@ -299,64 +299,76 @@ header nav a:active {
 
 .recommended-title {
     position: relative;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
     padding: 24px 80px;
-
     margin-bottom: 35px;
 
     font-size: 42px;
-
-    color: white;
-
-    overflow: hidden;
-
-    border-radius: 18px;
-
-    z-index: 1;
-
-    isolation: isolate;
-
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-    letter-spacing: 1px;
-
-    box-shadow:
-        0 8px 22px rgba(0,0,0,0.45);
-}
-
-/* =========================
-   RECOMMENDED TITLE ANIMATION
-========================= */
-
-.recommended-title {
-    position: relative;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 24px 80px;
-
-    margin-bottom: 35px;
-
-    font-size: 42px;
-
-    overflow: hidden;
-
-    border-radius: 18px;
-
-    isolation: isolate;
-
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
     letter-spacing: 2px;
 
-    box-shadow:
-        0 8px 22px rgba(0,0,0,0.45);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    /* IMPORTANT: makes stacking work correctly */
+    z-index: 0;
+}
+
+/* BACKGROUND IMAGE */
+.recommended-title::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: url("https://i.pinimg.com/1200x/cf/72/99/cf7299d662c7a728be4e47bf012681b0.jpg");
+    background-size: cover;
+    background-position: center;
+
+    z-index: -2;
+}
+
+/* DARK OVERLAY */
+.recommended-title::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0,0,0,0.35),
+        rgba(40,20,10,0.45)
+    );
+
+    z-index: -1;
+}
+
+/* GRADIENT TEXT (THIS IS THE KEY PART) */
+.recommended-title span {
+    background: repeating-linear-gradient(
+        -45deg,
+        #ffe29a,
+        #ffb347,
+        #fff0c2,
+        #c98a2b
+    );
+
+    background-size: 300% 300%;
+    animation: slideGradient 12s linear infinite;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes slideGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
 
     /* ANIMATED TEXT GRADIENT */
     background-image:
