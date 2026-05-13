@@ -49,12 +49,12 @@ header nav a {
     margin-top: 0;
 
     /* BIGGER DECORATIVE BORDER */
-    border: 20px solid transparent;
+    border: 18px solid transparent;
 
     border-image-source:
         url("https://foollovers.com/mat/menu05/51a-none.gif");
 
-    border-image-slice: 20;
+    border-image-slice: 18;
 
     border-image-repeat: round;
     
