@@ -311,29 +311,39 @@ header nav a:active {
 .recommended-title {
     position: relative;
     z-index: 1;
+
+    display: inline-block;
+
+    padding: 22px 70px;
+
+    margin-bottom: 35px;
+
+    color: white;
 }
 
 .recommended-title::before {
     content: "";
+
     position: absolute;
 
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    inset: 0;
 
-    width: 600px;   /* adjust size here */
-    height: 140px;  /* adjust size here */
+    background-image:
+        url("https://i.pinimg.com/1200x/cf/72/99/cf7299d662c7a728be4e47bf012681b0.jpg");
 
-    background-image: url("https://media.discordapp.net/attachments/1503446714239946843/1504111091347886100/tree-removebg-preview.png?ex=6a05cc1d&is=6a047a9d&hm=c679bc08338c4a23cc1f4e4db4df61617be40b146ad85794892428d0d8186e14&=&format=webp&quality=lossless&width=625&height=625");
-
-    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
-    background-size: contain;
+    background-repeat: no-repeat;
+
+    border-radius: 18px;
+
+    opacity: 0.9;
 
     z-index: -1;
-    opacity: 0.7;
-}
 
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.45);
+}
 .viewing-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
