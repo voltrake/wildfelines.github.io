@@ -981,3 +981,21 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
 
     box-sizing: border-box;
 }
+
+.classification-window {
+    width: 1240px;
+    margin: 60px auto;
+}
+
+.classification-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.classification-grid strong {
+    color: #111;
+}
