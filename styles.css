@@ -1088,3 +1088,41 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
     visibility: visible;
     bottom: 120%;
 }
+
+.tooltip {
+    position: fixed;
+    display: none;
+
+    width: 260px;
+    background: rgba(20, 15, 15, 0.95);
+    color: white;
+
+    border-radius: 12px;
+    padding: 10px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    z-index: 9999;
+
+    pointer-events: none;
+    transform: translate(15px, 15px);
+}
+
+.tooltip img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.tooltip h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.tooltip p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #ddd;
+}
