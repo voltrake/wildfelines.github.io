@@ -81,7 +81,7 @@
         Sunda clouded leopard
     </span>
 </div>
-                            <<div class="species">
+                            <div class="species">
     <span class="term"
           data-term="Clouded leopard"
           data-url="https://en.wikipedia.org/wiki/Clouded_leopard"
@@ -549,7 +549,16 @@
 
 </section>
     
-    <script>
+   
+
+    <div id="tooltip" class="tooltip">
+    <img id="tooltip-img" />
+    <div class="tooltip-content">
+        <h3 id="tooltip-title"></h3>
+        <p id="tooltip-desc"></p>
+    </div>
+</div>
+     <script>
 const tooltip = document.getElementById("tooltip");
 const title = document.getElementById("tooltip-title");
 const desc = document.getElementById("tooltip-desc");
@@ -592,14 +601,6 @@ document.querySelectorAll(".term").forEach(el => {
     });
 });
 </script>
-
-    <div id="tooltip" class="tooltip">
-    <img id="tooltip-img" />
-    <div class="tooltip-content">
-        <h3 id="tooltip-title"></h3>
-        <p id="tooltip-desc"></p>
-    </div>
-</div>
 
 </body>
 </html>
