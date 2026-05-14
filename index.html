@@ -245,44 +245,41 @@ Join wildlife cameraman Sandesh Kadur as he journeys across India to unravel the
 </section>
 
 <script>
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelector('.slides');
-    const slide = document.querySelectorAll('.slide');
+const slider = document.querySelector('.slider');
+const slides = document.querySelector('.slides');
+const slide = document.querySelectorAll('.slide');
 
-    let index = 0;
+let index = 0;
 
-    const slideWidth = slider.offsetWidth;
+/* =========================
+   AUTO SLIDE
+========================= */
+function updateSlide() {
+    slides.style.transform = `translate3d(-${index * 100}%, 0, 0)`;
+}
 
-    /* =========================
-       AUTO SLIDE
-    ========================= */
-    let autoSlide = setInterval(nextSlide, 4000);
+function nextSlide() {
+    index = (index + 1) % slide.length;
+    updateSlide();
+}
 
-    function nextSlide() {
-        index = (index + 1) % slide.length;
-        updateSlide();
-    }
+let autoSlide = setInterval(nextSlide, 4000);
 
-    function updateSlide() {
-       slides.style.transform = `translate3d(-${index * 100}%, 0, 0)`;
-    }
+/* =========================
+   DRAG FUNCTIONALITY
+========================= */
+let isDown = false;
+let startX;
 
-    /* =========================
-       DRAG FUNCTIONALITY
-    ========================= */
-    let isDown = false;
-    let startX;
-    let currentX;
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX;
+    slider.style.cursor = "grabbing";
 
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        startX = e.pageX;
-        slider.style.cursor = "grabbing";
+    clearInterval(autoSlide);
+});
 
-        clearInterval(autoSlide); // pause autoplay while dragging
-    });
-
-   slider.addEventListener('mousemove', (e) => {
+slider.addEventListener('mousemove', (e) => {
     if (!isDown) return;
 
     const diff = e.pageX - startX;
@@ -291,7 +288,7 @@ Join wildlife cameraman Sandesh Kadur as he journeys across India to unravel the
     slides.style.transform = `translate3d(calc(${-index * 100}% + ${diff}px), 0, 0)`;
 });
 
-    slider.addEventListener('mouseup', (e) => {
+slider.addEventListener('mouseup', (e) => {
     isDown = false;
     slider.style.cursor = "grab";
 
@@ -307,35 +304,15 @@ Join wildlife cameraman Sandesh Kadur as he journeys across India to unravel the
     autoSlide = setInterval(nextSlide, 4000);
 });
 
-        updateSlide();
-
-        autoSlide = setInterval(nextSlide, 4000); // resume autoplay
-    });
-
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.style.cursor = "default";
-        updateSlide();
-    });
-
-    /* =========================
-       RESPONSIVE FIX
-    ========================= */
-    window.addEventListener('resize', () => {
-        updateSlide();
-    });
-</script>
-        
-    <script>
-
-const factsContainer = document.querySelector('.facts-container');
-const factsDropdown = document.querySelector('.facts-dropdown');
-
-factsContainer.addEventListener('click', () => {
-    factsDropdown.classList.toggle('active');
-    factsContainer.classList.toggle('active');
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.style.cursor = "default";
 });
 
+/* =========================
+   INIT
+========================= */
+updateSlide();
 </script>
 
            
