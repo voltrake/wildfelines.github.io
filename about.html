@@ -161,28 +161,7 @@
 </section>
     
     
-<script>
 
-const slider = document.querySelector('.slider');
-
-let isDown = false;
-let startX;
-
-slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX;
-    slider.style.cursor = "grabbing";
-});
-
-slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.style.cursor = "grab";
-});
-
-slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.style.cursor = "default";
-});
 
 </script>
 
