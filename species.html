@@ -165,6 +165,16 @@
     </div>
 
 </section>
+    <script>
+document.querySelectorAll('.term').forEach(el => {
+    el.addEventListener('click', () => {
+        const url = el.dataset.url;
+        if (url) {
+            window.open(url, '_blank'); // opens info page
+        }
+    });
+});
+</script>
 
 </body>
 </html>
