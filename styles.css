@@ -898,3 +898,29 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.about-info {
+    width: 1240px;
+
+    margin: 60px auto;
+
+    padding: 40px;
+
+    background: rgba(20, 15, 10, 0.88);
+
+    border-radius: 14px;
+
+    color: #e6e6e6;
+
+    font-family: "Baskerville Old Face", serif;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+.about-info p {
+    margin-bottom: 20px;
+}
