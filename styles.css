@@ -731,9 +731,11 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
     width: 100%;
     height: 698px;
 
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+
+    background-color: black;
 }
 
 .about-info {
