@@ -129,27 +129,24 @@ style="background-image: url('https://i.pinimg.com/originals/d7/38/03/d738034b4e
 
     <div class="facts-container">
 
-    <!-- FACTS SLIDESHOW -->
-    <div class="facts-slideshow">
+   <div class="facts-collage">
 
-        <img 
-            src="https://i.pinimg.com/1200x/2c/60/74/2c6074d5c05edba5b4ac1846951adcf9.jpg"
-            class="facts-slide active"
-            alt="Animal Facts 1"
-        >
+    <img 
+        src="https://i.pinimg.com/1200x/2c/60/74/2c6074d5c05edba5b4ac1846951adcf9.jpg"
+        alt="Animal Facts 1"
+    >
 
-        <img 
-            src="https://i.pinimg.com/1200x/5a/a0/5e/5aa05ea28ebd6135100a9ec0cfd150f1.jpg"
-            class="facts-slide"
-            alt="Animal Facts 2"
-        >
+    <img 
+        src="https://i.pinimg.com/1200x/5a/a0/5e/5aa05ea28ebd6135100a9ec0cfd150f1.jpg"
+        alt="Animal Facts 2"
+    >
 
-        <img 
-            src="https://i.pinimg.com/736x/98/2c/26/982c26b0ddf38ea3f5f2dbc6d6bb2f11.jpg"
-            class="facts-slide"
-            alt="Animal Facts 3"
-        >
+    <img 
+        src="https://i.pinimg.com/736x/98/2c/26/982c26b0ddf38ea3f5f2dbc6d6bb2f11.jpg"
+        alt="Animal Facts 3"
+    >
 
+</div>
     </div>
 
     <div class="facts-label">
@@ -324,35 +321,18 @@ style="background-image: url('https://i.pinimg.com/originals/d7/38/03/d738034b4e
         updateSlide();
     });
 </script>
-        <script>
+        
+    <script>
 
 const factsContainer = document.querySelector('.facts-container');
 const factsDropdown = document.querySelector('.facts-dropdown');
-
-            <script>
-
-/* FACTS IMAGE SLIDESHOW */
-
-const factsSlides = document.querySelectorAll('.facts-slide');
-
-let factsIndex = 0;
-
-setInterval(() => {
-
-    factsSlides[factsIndex].classList.remove('active');
-
-    factsIndex = (factsIndex + 1) % factsSlides.length;
-
-    factsSlides[factsIndex].classList.add('active');
-
-}, 3500);
-
-</script>
 
 factsContainer.addEventListener('click', () => {
     factsDropdown.classList.toggle('active');
 });
 
 </script>
+
+           
 </body>
 </html>
