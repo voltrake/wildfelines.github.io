@@ -658,82 +658,78 @@ header nav a:active {
     margin: 60px auto;
 }
 
+/* FACTS CONTAINER */
 .facts-container {
+    position: relative;
+
     display: flex;
     flex-direction: column;
+
+    cursor: pointer;
+
+    margin-bottom: 0;
 }
 
-/* FACTS COLLAGE */
+/* CHOCOLATE FRAME */
 .facts-collage {
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 8px;
+    gap: 10px;
 
-    width: 100%;
-
-    height: 380px;
-
-    padding: 10px;
+    padding: 12px;
 
     background:
-        url("https://foollovers.com/mat/menu05/51a-none.gif");
+        linear-gradient(
+            145deg,
+            #5a3418,
+            #2b160b
+        );
 
-    background-size: cover;
+    border: 4px solid #8b5a2b;
 
-    border-radius: 14px;
+    box-shadow:
+        0 0 0 4px #3a1f0f,
+        0 10px 24px rgba(0,0,0,0.45),
+        inset 0 0 12px rgba(255,255,255,0.05);
 
-    box-sizing: border-box;
+    border-radius: 18px;
 
     overflow: hidden;
 }
 
+/* IMAGES */
 .facts-collage img {
     width: 100%;
 
-    height: 100%;
+    height: 360px;
 
     object-fit: cover;
 
-    border-radius: 8px;
+    border-radius: 10px;
 
     display: block;
 
-    transition: transform 0.35s ease;
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
 }
 
 .facts-collage img:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
+
+    filter: brightness(1.05);
 }
 
-.facts-collage img {
-    width: 100%;
-    height: 520px;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.4s ease;
-}
-
-.facts-collage img:hover {
-    transform: scale(1.03);
-}
-
-.facts-image {
-    width: 100%;
-    display: block;
-    border-radius: 12px;
-}
-
+/* LABEL */
 .facts-label {
     position: absolute;
-    bottom: 25px;
-    left: 25px;
 
-    background: rgba(46, 125, 50, 0.88);
+    bottom: 18px;
+    left: 18px;
+
+    background: rgba(25, 25, 25, 0.78);
 
     color: white;
 
@@ -741,11 +737,16 @@ header nav a:active {
 
     font-size: 28px;
 
-    font-family: "Baskerville Old Face", serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
     border-radius: 10px;
 
     backdrop-filter: blur(4px);
+
+    z-index: 5;
+
+    box-shadow:
+        0 4px 14px rgba(0,0,0,0.45);
 }
 
 .facts-dropdown {
@@ -766,8 +767,11 @@ header nav a:active {
 }
 
 .facts-dropdown.active {
-    max-height: 5000px;
+    max-height: 7000px;
+
     padding: 30px;
+
+    margin-top: 12px;
 }
 
 .facts-dropdown h2 {
