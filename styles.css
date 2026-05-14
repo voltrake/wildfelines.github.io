@@ -672,6 +672,19 @@ header nav a:active {
     overflow: hidden;
 
     border-radius: 12px;
+
+    border: 10px solid transparent;
+
+    border-image-source:
+        url("https://foollovers.com/mat/menu05/51a-none.gif");
+
+    border-image-slice: 10;
+
+    border-image-repeat: round;
+
+    box-sizing: border-box;
+
+    background: #111;
 }
 
 .facts-collage img {
