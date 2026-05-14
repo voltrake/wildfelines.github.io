@@ -896,6 +896,40 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
         inset 2px 2px #dfdfdf;
 }
 
+.classification-wrapper {
+    position: relative;
+    padding: 35px;
+
+    background-image: url("https://i.pinimg.com/736x/58/6b/40/586b40c9ec5afc150d70b02b995e2aa1.jpg");
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 25px rgba(0,0,0,0.55);
+
+    overflow: hidden;
+}
+
+/* optional dark overlay for readability */
+.classification-wrapper::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,0.35);
+
+    z-index: 0;
+}
+
+/* keep windows above overlay */
+.classification-wrapper .sci-window {
+    position: relative;
+    z-index: 1;
+}
+
 .window-body {
      background: rgba(192, 192, 192, 0.65);
     backdrop-filter: blur(2px);
