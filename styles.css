@@ -656,6 +656,33 @@ header nav a:active {
     position: relative;
     cursor: pointer;
 }
+/* FACTS SLIDESHOW */
+.facts-slideshow {
+    position: relative;
+    width: 100%;
+    height: 670px;
+
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.facts-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    transition: opacity 1s ease-in-out;
+}
+
+.facts-slide.active {
+    opacity: 1;
+}
 
 .facts-image {
     width: 100%;
