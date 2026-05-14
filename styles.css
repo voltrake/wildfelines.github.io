@@ -437,23 +437,6 @@ header nav a:active {
 }
 
 /* ANIMATED TEXT */
-.recommended-title span {
-    background:
-        repeating-linear-gradient(
-            -45deg,
-            #ffe29a 0%,
-            #ffb347 25%,
-            #fff0c2 50%,
-            #c98a2b 75%
-        );
-
-    background-size: 300% 300%;
-
-    animation: slideGradient 10s linear infinite;
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 /* ANIMATION */
 @keyframes slideGradient {
@@ -466,33 +449,6 @@ header nav a:active {
     }
 }
 
-/* BACKGROUND IMAGE */
-.recommended-title::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background: url("https://i.pinimg.com/1200x/cf/72/99/cf7299d662c7a728be4e47bf012681b0.jpg");
-    background-size: cover;
-    background-position: center;
-
-    z-index: -2;
-}
-
-/* DARK OVERLAY */
-.recommended-title::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-        135deg,
-        rgba(0,0,0,0.35),
-        rgba(40,20,10,0.45)
-    );
-
-    z-index: -1;
-}
 
 /* GRADIENT TEXT (THIS IS THE KEY PART) */
 .recommended-title span {
@@ -884,11 +840,6 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
     }
 }
 
-.slides {
-    width: 100%;
-    height: 698px;
-    display: block;
-}
 
 .single-slide {
     width: 100%;
@@ -933,13 +884,7 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
     align-items: stretch;
 }
 
-.cat-image-row img {
-    width: 48%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
+
 
 .felidae-characteristics {
     width: 1240px;
@@ -973,7 +918,9 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
     object-fit: cover;
     border-radius: 12px;
 
-    /* CHOCOLATE BORDER */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+
+    /* chocolate border */
     border: 10px solid transparent;
     border-image-source: url("https://foollovers.com/mat/menu05/51a-none.gif");
     border-image-slice: 10;
@@ -990,12 +937,16 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
 .classification-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 30px;
 
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
+
+    align-items: start;
 }
 
-.classification-grid strong {
-    color: #111;
+.classification-grid div {
+    background: rgba(255,255,255,0.04);
+    padding: 20px;
+    border-radius: 10px;
 }
