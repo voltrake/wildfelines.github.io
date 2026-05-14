@@ -629,11 +629,14 @@ header nav a:active {
 }
 
 .facts-label {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
+    position: relative;
 
-    background: rgba(46, 125, 50, 0.85);
+    margin-top: -80px;
+    margin-left: 25px;
+
+    display: inline-block;
+
+    background: rgba(46, 125, 50, 0.88);
 
     color: white;
 
@@ -641,11 +644,13 @@ header nav a:active {
 
     font-size: 28px;
 
-    font-family: "Baskerville Old Face", serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
     border-radius: 10px;
 
     backdrop-filter: blur(4px);
+
+    z-index: 5;
 }
 
 .facts-section {
@@ -654,8 +659,8 @@ header nav a:active {
 }
 
 .facts-container {
-    position: relative;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 /* FACTS COLLAGE */
