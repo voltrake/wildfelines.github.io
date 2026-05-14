@@ -282,27 +282,30 @@ Join wildlife cameraman Sandesh Kadur as he journeys across India to unravel the
         clearInterval(autoSlide); // pause autoplay while dragging
     });
 
-    slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
+   slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
 
-        currentX = e.pageX;
-        let diff = currentX - startX;
+    const diff = e.pageX - startX;
 
-        slides.style.transform = `translateX(${-index * slideWidth + diff}px)`;
-    });
+    slides.style.transition = "none";
+    slides.style.transform = `translate3d(calc(${-index * 100}% + ${diff}px), 0, 0)`;
+});
 
     slider.addEventListener('mouseup', (e) => {
-        isDown = false;
-        slider.style.cursor = "grab";
+    isDown = false;
+    slider.style.cursor = "grab";
 
-        let diff = e.pageX - startX;
+    slides.style.transition = "transform 1.2s cubic-bezier(0.22, 1, 0.36, 1)";
 
-        if (diff < -100 && index < slide.length - 1) {
-            index++;
-        } 
-        else if (diff > 100 && index > 0) {
-            index--;
-        }
+    let diff = e.pageX - startX;
+
+    if (diff < -100 && index < slide.length - 1) index++;
+    else if (diff > 100 && index > 0) index--;
+
+    updateSlide();
+
+    autoSlide = setInterval(nextSlide, 4000);
+});
 
         updateSlide();
 
