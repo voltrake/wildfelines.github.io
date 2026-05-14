@@ -490,27 +490,25 @@ header nav a:hover {
 
 .facts-label {
     position: relative;
-
-    margin-top: -80px;
-    margin-left: 25px;
-
     display: inline-block;
 
-    background: rgba(46, 125, 50, 0.88);
+    margin: 20px 0 0 18px;
 
+    background: rgba(25, 25, 25, 0.78);
     color: white;
 
     padding: 14px 22px;
-
     font-size: 28px;
 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
     border-radius: 10px;
 
     backdrop-filter: blur(4px);
-
     z-index: 5;
+
+    box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .facts-section {
@@ -528,6 +526,10 @@ header nav a:hover {
     cursor: pointer;
 
     margin-bottom: 0;
+}
+
+.facts-container.active .facts-label {
+    transform: translateY(120px);
 }
 
 /* CHOCOLATE FRAME */
@@ -582,32 +584,7 @@ header nav a:hover {
     filter: brightness(1.05);
 }
 
-/* LABEL */
-.facts-label {
-    position: absolute;
 
-    bottom: 18px;
-    left: 18px;
-
-    background: rgba(25, 25, 25, 0.78);
-
-    color: white;
-
-    padding: 14px 22px;
-
-    font-size: 28px;
-
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-    border-radius: 10px;
-
-    backdrop-filter: blur(4px);
-
-    z-index: 5;
-
-    box-shadow:
-        0 4px 14px rgba(0,0,0,0.45);
-}
 
 .facts-dropdown {
     max-height: 0;
