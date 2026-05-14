@@ -933,6 +933,25 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
     width: 1240px;
     margin: 60px auto;
 }
+.window {
+    width: 100%;
+    background: #c0c0c0;
+
+    /* THIS is what you are missing */
+    border: 10px solid transparent;
+    border-image-source: url("https://foollovers.com/mat/menu05/51a-none.gif");
+    border-image-slice: 10;
+    border-image-repeat: round;
+
+    box-sizing: border-box;
+
+    /* stronger 98-style depth */
+    box-shadow:
+        inset -1px -1px #0a0a0a,
+        inset 1px 1px #ffffff,
+        inset -2px -2px #808080,
+        inset 2px 2px #dfdfdf;
+}
 
 .classification-grid {
     display: grid;
@@ -946,7 +965,7 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
 }
 
 .classification-grid div {
-    background: rgba(255,255,255,0.04);
+    background: rgba(255,255,255,0.02);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 0; /* important: removes fake modern card look */
 }
