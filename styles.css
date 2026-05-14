@@ -969,3 +969,23 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
     padding: 20px;
     border-radius: 0; /* important: removes fake modern card look */
 }
+
+.classification-wrapper {
+    width: 1240px;
+    margin: 60px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* make windows consistent height */
+.classification-wrapper .window {
+    height: 420px;
+}
+
+/* ensure fieldset scroll works properly */
+.classification-wrapper .fieldset {
+    height: 340px;
+    overflow-y: auto;
+}
