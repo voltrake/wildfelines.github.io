@@ -1090,7 +1090,7 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
 }
 
 .tooltip {
-    position: fixed;
+    position: absolute;
     display: none;
 
     width: 260px;
