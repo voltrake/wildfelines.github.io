@@ -731,11 +731,15 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
     width: 100%;
     height: 698px;
 
+    background-image: url("https://i.pinimg.com/1200x/a9/55/94/a95594ce7f9c93fe27b0acbe075b13dc.jpg");
+
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 
     background-color: black;
+
+    position: relative;
 }
 
 .about-info {
