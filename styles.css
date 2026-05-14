@@ -936,8 +936,9 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
 
 .phylo-section {
     width: 95%;
-     margin: 0 auto 80px auto;
-    padding: 40px;
+    margin: 10px auto 80px auto; /* reduce top margin */
+    padding: 20px 40px 40px 40px; /* slightly tighter top padding */
+
 
     background: rgba(15, 10, 10, 0.9);
 
