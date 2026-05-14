@@ -966,3 +966,18 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
 .felidae-characteristics li {
     margin-bottom: 10px;
 }
+
+.cat-image-row img {
+    width: 50%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+
+    /* CHOCOLATE BORDER */
+    border: 10px solid transparent;
+    border-image-source: url("https://foollovers.com/mat/menu05/51a-none.gif");
+    border-image-slice: 10;
+    border-image-repeat: round;
+
+    box-sizing: border-box;
+}
