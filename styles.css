@@ -30,13 +30,12 @@ a, button, .facts-container, .view-card, header nav a {
     width: 100%;
     max-width: 1240px;
     height: 698px;
+
     position: relative;
     overflow: hidden;
+
     margin: 0 auto;
 
-    cursor: grab;
-    border: 10px solid transparent;
-    border-image: url("https://foollovers.com/mat/menu05/51a-none.gif") 10 round;
     box-sizing: border-box;
 }
 
@@ -52,21 +51,21 @@ a, button, .facts-container, .view-card, header nav a {
 
 .slide {
     width: 100%;
-    height: 698px;
+    height: 100%;
     flex-shrink: 0;
-
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    position: relative;
-
-    background-color: black;
 }
 
 .single-slide {
     width: 100%;
-    height: 698px;
+    height: 100%;
+
+    background-image: url("https://i.pinimg.com/1200x/a9/55/94/a95594ce7f9c93fe27b0acbe075b13dc.jpg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: relative;
 }
 
 /* TEXT CONTENT */
