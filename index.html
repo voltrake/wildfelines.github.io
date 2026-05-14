@@ -308,6 +308,13 @@ slider.addEventListener('mouseleave', () => {
     isDown = false;
     slider.style.cursor = "default";
 });
+    const factsContainer = document.querySelector('.facts-container');
+const factsDropdown = document.querySelector('.facts-dropdown');
+
+factsContainer.addEventListener('click', () => {
+    factsContainer.classList.toggle('active');
+    factsDropdown.classList.toggle('active');
+});
 
 /* =========================
    INIT
