@@ -988,21 +988,24 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
     overflow: hidden;
 }
 
-/* background layer */
 .sci-window-bg::before {
     content: "";
     position: absolute;
     inset: 0;
-
     background: url("https://i.pinimg.com/1200x/5d/ba/9d/5dba9dc30ac889c68407db46bf235662.jpg");
     background-size: cover;
     background-position: center;
-
-    opacity: 0.35; /* adjust visibility */
     z-index: 0;
 }
 
-/* keep content above background */
+.sci-window-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    z-index: 0;
+}
+
 .sci-window-bg .window-body,
 .sci-window-bg .title-bar {
     position: relative;
