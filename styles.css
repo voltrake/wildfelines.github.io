@@ -99,143 +99,68 @@ a, button, .facts-container, .view-card, header nav a {
 
 header {
     position: absolute;
-    top: 30px;
-    right: 42px;
-
-    z-index: 100;
-}
-
-/* =========================
-   HEADER CONTAINER
-========================= */
-
-header {
-    position: absolute;
     top: 25px;
     right: 42px;
-
     z-index: 100;
 }
 
-/* TRANSPARENT GLASS CONTAINER */
 header nav {
     display: flex;
     gap: 18px;
-
     padding: 14px 24px;
-
     border-radius: 18px;
 
-    /* BROWN GRADIENT */
-    background: linear-gradient(
-        135deg,
+    background: linear-gradient(135deg,
         rgba(70, 45, 25, 0.85),
         rgba(35, 20, 10, 0.75)
     );
 
     backdrop-filter: blur(10px);
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
-    box-shadow:
-        0 8px 24px rgba(0,0,0,0.45),
-        inset 0 1px 0 rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45),
+                inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
-
-/* NAV BUTTONS */
 header nav a {
     position: relative;
-
+    overflow: hidden;
     padding: 12px 28px;
-
     font-size: 22px;
-
     color: white;
     text-decoration: none;
 
     border-radius: 12px;
-
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
-    letter-spacing: 1px;
-
-    background: linear-gradient(
-        145deg,
+    background: linear-gradient(145deg,
         rgba(70,70,70,0.45),
         rgba(20,20,20,0.75)
     );
 
     border: 1px solid rgba(255,255,255,0.08);
 
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        box-shadow 0.25s ease;
-
-    box-shadow:
-        0 4px 12px rgba(0,0,0,0.4),
-        inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: 0.25s ease;
 }
 
-header nav a {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-/* GIF overlay (hidden by default) */
 header nav a::after {
     content: "";
-
     position: absolute;
-
     inset: 0;
-
-    background-image:
-        url("https://i.pinimg.com/originals/ca/85/65/ca8565841d017d9784a539fee2cd4f77.gif");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
+    background: url("https://i.pinimg.com/originals/ca/85/65/ca8565841d017d9784a539fee2cd4f77.gif")
+        center/cover no-repeat;
     opacity: 0;
-
-    transition: opacity 0.25s ease;
-
-    pointer-events: none;
-
+    transition: 0.25s ease;
     z-index: -1;
-
-    border-radius: 12px;
 }
 
-
-/* show GIF only on hover of THAT button */
 header nav a:hover::after {
     opacity: 1;
 }
 
-
-/* HOVER EFFECT */
 header nav a:hover {
     transform: translateY(-2px);
-
-    background: linear-gradient(
-        145deg,
-        rgba(90,90,90,0.65),
-        rgba(25,25,25,0.9)
-    );
-
-    box-shadow:
-        0 6px 18px rgba(0,0,0,0.55),
-        0 0 12px rgba(255,255,255,0.08);
 }
 
-/* CLICK EFFECT */
-header nav a:active {
-    transform: scale(0.96);
-}
 .felines-text {
     position: absolute;
 
@@ -412,6 +337,11 @@ header nav a:active {
 
 
 /* GRADIENT TEXT (THIS IS THE KEY PART) */
+@keyframes slideGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
 .recommended-title span {
     background: repeating-linear-gradient(
         -45deg,
@@ -420,19 +350,12 @@ header nav a:active {
         #fff0c2,
         #c98a2b
     );
-
     background-size: 300% 300%;
     animation: slideGradient 12s linear infinite;
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-@keyframes slideGradient {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
-}
-
     
 
 
@@ -448,7 +371,6 @@ header nav a:active {
     }
 }
 
-
 .viewing-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -456,11 +378,17 @@ header nav a:active {
 }
 
 .view-card {
-    background: #111;
+    background: rgba(15, 10, 8, 0.88);
     border-radius: 15px;
     overflow: hidden;
     width: 100%;
+
     transition: transform 0.3s ease;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.06);
+
+    text-decoration: none;
+    color: inherit;
 }
 
 .view-card:hover {
@@ -495,9 +423,6 @@ header nav a:active {
 
     text-shadow: none;
 }
-
-
-
 
 
 .view-card {
