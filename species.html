@@ -559,45 +559,41 @@
     </div>
 </div>
      <script>
-const tooltip = document.getElementById("tooltip");
-const title = document.getElementById("tooltip-title");
-const desc = document.getElementById("tooltip-desc");
-const img = document.getElementById("tooltip-img");
+document.addEventListener("DOMContentLoaded", () => {
+    const tooltip = document.getElementById("tooltip");
+    const title = document.getElementById("tooltip-title");
+    const desc = document.getElementById("tooltip-desc");
+    const img = document.getElementById("tooltip-img");
 
-document.querySelectorAll(".term").forEach(el => {
+    document.querySelectorAll(".term").forEach(el => {
 
-    // CLICK → Wikipedia
-    el.addEventListener("click", (e) => {
-        const url = el.dataset.url;
-        if (url) {
-            window.open(url, "_blank");
-        }
-    });
+        el.addEventListener("click", () => {
+            const url = el.dataset.url;
+            if (url) window.open(url, "_blank");
+        });
 
-    // HOVER → show tooltip
-    el.addEventListener("mouseenter", (e) => {
-        title.textContent = el.dataset.term || "Unknown";
-        desc.textContent = el.dataset.desc || "No description available.";
+        el.addEventListener("mouseenter", () => {
+            title.textContent = el.dataset.term || "Unknown";
+            desc.textContent = el.dataset.desc || "No description available.";
 
-        if (el.dataset.img) {
-            img.src = el.dataset.img;
-            img.style.display = "block";
-        } else {
-            img.style.display = "none";
-        }
+            if (el.dataset.img) {
+                img.src = el.dataset.img;
+                img.style.display = "block";
+            } else {
+                img.style.display = "none";
+            }
 
-        tooltip.style.display = "block";
-    });
+            tooltip.style.display = "block";
+        });
 
-    // MOVE tooltip with cursor
-    el.addEventListener("mousemove", (e) => {
-        tooltip.style.left = e.pageX + "px";
-        tooltip.style.top = e.pageY + "px";
-    });
+        el.addEventListener("mousemove", (e) => {
+            tooltip.style.left = e.pageX + "px";
+            tooltip.style.top = e.pageY + "px";
+        });
 
-    // HIDE
-    el.addEventListener("mouseleave", () => {
-        tooltip.style.display = "none";
+        el.addEventListener("mouseleave", () => {
+            tooltip.style.display = "none";
+        });
     });
 });
 </script>
