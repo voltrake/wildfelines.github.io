@@ -929,10 +929,14 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
     box-sizing: border-box;
 }
 
-.classification-window {
+.classification-wrapper {
     width: 1240px;
     margin: 60px auto;
+    display: flex;
+    gap: 25px;
+    justify-content: center; /* important */
 }
+
 .window {
     width: 100%;
     background: #c0c0c0;
@@ -979,83 +983,27 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
 
 /* shared window sizing */
 .sci-window {
-    flex: 1;
-}
-
-/* FIRST WINDOW BACKGROUND IMAGE */
-.sci-window-bg {
-    position: relative;
-    overflow: hidden;
-}
-
-.sci-window-bg::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url("https://i.pinimg.com/1200x/5d/ba/9d/5dba9dc30ac889c68407db46bf235662.jpg");
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-}
-
-.sci-window-bg::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.25);
-    z-index: 0;
-}
-
-.sci-window-bg .window-body,
-.sci-window-bg .title-bar {
-    position: relative;
-    z-index: 1;
-}
-
-/* make window body readable */
-.sci-window-bg .window-body {
-    background: rgba(192, 192, 192, 0.85);
-}
-
-.bg, .inner {
-    box-sizing: border-box;
-}
-
-.bg {
-    background: #FE82B624;
-
-    /* optional image background */
-    background-image: url("https://i.pinimg.com/1200x/5d/ba/9d/5dba9dc30ac889c68407db46bf235662.jpg");
-    background-size: cover;
-    background-position: center;
-
-    padding: 16px; /* THIS becomes your "border thickness" */
-    width: 100%;
-
-    border: 10px solid transparent;
-    border-image-source: url("https://foollovers.com/mat/menu05/51a-none.gif");
-    border-image-slice: 10;
-    border-image-repeat: round;
-
-    box-shadow: 0 10px 24px rgba(0,0,0,0.45);
-}
-
-.inner {
-    background: rgba(255, 255, 255, 0.0); /* let window control visual */
-    color: #000;
-    padding: 0;
-    height: 100%;
+     flex: 0 0 420px;   /* controls box width */
 }
 
 .sci-window {
-    width: 100%;
-    background: #c0c0c0;
+    flex: 0 0 420px;
+
+    position: relative;
+    overflow: hidden;
+
+    background-image: url("YOUR_IMAGE_URL_HERE");
+    background-size: cover;
+    background-position: center;
 
     box-shadow:
         inset -1px -1px #0a0a0a,
         inset 1px 1px #ffffff,
         inset -2px -2px #808080,
         inset 2px 2px #dfdfdf;
+}
 
-    border: none; /* IMPORTANT: remove old cassette conflict */
+.window-body {
+     background: rgba(192, 192, 192, 0.65);
+    backdrop-filter: blur(2px);
 }
