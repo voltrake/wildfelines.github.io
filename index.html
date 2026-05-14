@@ -329,6 +329,26 @@ style="background-image: url('https://i.pinimg.com/originals/d7/38/03/d738034b4e
 const factsContainer = document.querySelector('.facts-container');
 const factsDropdown = document.querySelector('.facts-dropdown');
 
+            <script>
+
+/* FACTS IMAGE SLIDESHOW */
+
+const factsSlides = document.querySelectorAll('.facts-slide');
+
+let factsIndex = 0;
+
+setInterval(() => {
+
+    factsSlides[factsIndex].classList.remove('active');
+
+    factsIndex = (factsIndex + 1) % factsSlides.length;
+
+    factsSlides[factsIndex].classList.add('active');
+
+}, 3500);
+
+</script>
+
 factsContainer.addEventListener('click', () => {
     factsDropdown.classList.toggle('active');
 });
