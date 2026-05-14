@@ -917,3 +917,121 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
         inset -2px -2px #808080,
         inset 2px 2px #dfdfdf; /* keep or remove depending on style */
 } 
+
+
+.phylo-section {
+    width: 95%;
+    margin: 80px auto;
+    padding: 40px;
+
+    background: rgba(15, 10, 10, 0.9);
+
+    border-radius: 18px;
+
+    overflow-x: auto;
+
+    color: white;
+}
+
+.phylo-title {
+    font-size: 42px;
+    margin-bottom: 40px;
+
+    font-family: Impact, sans-serif;
+}
+
+.phylo-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 2400px;
+}
+
+.branch-row {
+    display: flex;
+    gap: 40px;
+
+    margin-top: 30px;
+}
+
+.branch {
+    position: relative;
+
+    padding-left: 20px;
+
+    border-left: 3px solid #8b5a2b;
+}
+
+.node-box {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    margin-bottom: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #5a3418,
+            #2b160b
+        );
+
+    border: 2px solid #8b5a2b;
+
+    border-radius: 12px;
+
+    font-family: Impact, sans-serif;
+
+    font-size: 22px;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.4);
+}
+
+.lineage {
+    background:
+        linear-gradient(
+            145deg,
+            #7a4b22,
+            #3a1d0d
+        );
+}
+
+.genus {
+    background:
+        linear-gradient(
+            145deg,
+            #444,
+            #222
+        );
+}
+
+.species {
+    position: relative;
+
+    margin: 10px 0;
+    padding-left: 18px;
+
+    font-size: 17px;
+
+    font-family: "Baskerville Old Face", serif;
+
+    color: #ddd;
+}
+
+.species::before {
+    content: "";
+
+    position: absolute;
+
+    left: -20px;
+    top: 12px;
+
+    width: 16px;
+    height: 2px;
+
+    background: #8b5a2b;
+}
