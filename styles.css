@@ -46,18 +46,27 @@ a, button, .facts-container, .view-card, header nav a {
 
 .slides {
     display: flex;
-    width: calc(1240px * 3);
+    width: 100%;
     height: 698px;
-    transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .slide {
-    width: 1240px;
+    width: 100%;
     height: 698px;
     flex-shrink: 0;
-    background-size: cover;
+
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+
+    position: relative;
+
+    background-color: black;
+}
+
+.single-slide {
+    width: 100%;
+    height: 698px;
 }
 
 /* TEXT CONTENT */
@@ -727,20 +736,6 @@ header nav a:hover span:nth-child(7) { animation-delay: 0.3s; }
 }
 
 
-.single-slide {
-    width: 100%;
-    height: 698px;
-
-    background-image: url("https://i.pinimg.com/1200x/a9/55/94/a95594ce7f9c93fe27b0acbe075b13dc.jpg");
-
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    background-color: black;
-
-    position: relative;
-}
 
 .about-info {
     width: 1240px;
