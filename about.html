@@ -15,28 +15,14 @@
     <!-- SAME SLIDER -->
     <div class="slider">
 
-        <div class="slides">
+       <div class="slides">
 
-            <!-- FIRST SLIDE -->
-            <div class="slide first-slide"
-            style="background-image: url('https://cdn.discordapp.com/attachments/1503446714239946843/1503446972680372425/Starter.jpg');">
-                <div class="slide-overlay"></div>
+    <div class="slide single-slide"
+    style="background-image: url('https://i.pinimg.com/1200x/a9/55/94/a95594ce7f9c93fe27b0acbe075b13dc.jpg');">
+        <div class="slide-overlay"></div>
+    </div>
 
-            </div>
-
-            <!-- SECOND -->
-            <div class="slide second-slide"
-            style="background-image: url('https://media.discordapp.net/attachments/1503446714239946843/1503720967229149356/Page2.jpg');">
-                                <div class="slide-overlay"></div>
-            </div>
-
-            <!-- THIRD -->
-            <div class="slide third-slide"
-            style="background-image: url('https://media.discordapp.net/attachments/1503446714239946843/1503722335771951207/Page3.jpg');">
-                                <div class="slide-overlay"></div>
-            </div>
-
-        </div>
+</div>
 
     </div>
 
@@ -83,82 +69,27 @@
 
 <script>
 
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelector('.slides');
-    const slide = document.querySelectorAll('.slide');
+const slider = document.querySelector('.slider');
 
-    let index = 0;
+let isDown = false;
+let startX;
 
-    const slideWidth = slider.offsetWidth;
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX;
+    slider.style.cursor = "grabbing";
+});
 
-    /* =========================
-       AUTO SLIDE
-    ========================= */
-    let autoSlide = setInterval(nextSlide, 4000);
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.style.cursor = "grab";
+});
 
-    function nextSlide() {
-        index = (index + 1) % slide.length;
-        updateSlide();
-    }
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.style.cursor = "default";
+});
 
-    function updateSlide() {
-        slides.style.transform = `translateX(-${index * slideWidth}px)`;
-    }
-
-    /* =========================
-       DRAG FUNCTIONALITY
-    ========================= */
-    let isDown = false;
-    let startX;
-    let currentX;
-
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        startX = e.pageX;
-        slider.style.cursor = "grabbing";
-
-        clearInterval(autoSlide); // pause autoplay while dragging
-    });
-
-    slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-
-        currentX = e.pageX;
-        let diff = currentX - startX;
-
-        slides.style.transform = `translateX(${-index * slideWidth + diff}px)`;
-    });
-
-    slider.addEventListener('mouseup', (e) => {
-        isDown = false;
-        slider.style.cursor = "grab";
-
-        let diff = e.pageX - startX;
-
-        if (diff < -100 && index < slide.length - 1) {
-            index++;
-        } 
-        else if (diff > 100 && index > 0) {
-            index--;
-        }
-
-        updateSlide();
-
-        autoSlide = setInterval(nextSlide, 4000); // resume autoplay
-    });
-
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.style.cursor = "default";
-        updateSlide();
-    });
-
-    /* =========================
-       RESPONSIVE FIX
-    ========================= */
-    window.addEventListener('resize', () => {
-        updateSlide();
-    });
 </script>
 
 </body>
