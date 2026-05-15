@@ -529,7 +529,7 @@ header nav a:hover {
 }
 
 .facts-container.active .facts-label {
-    transform: translateY(120px);
+    transform: none;
 }
 
 /* CHOCOLATE FRAME */
